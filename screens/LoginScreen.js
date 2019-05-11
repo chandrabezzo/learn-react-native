@@ -12,7 +12,7 @@ export default class SettingsScreen extends React.Component {
   };
 
   handleLoginPress = () => {
-    console.log("test")
+    this.props.navigation.navigate("Home")
   };
 
   render() {

@@ -1,7 +1,10 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
-import LoginScreen from './screens/LoginScreen';
+import { StyleSheet, View, Platform } from "react-native";
+import AppNavigator from './navigation/AppNavigator';
+import { createAppContainer } from 'react-navigation';
+
+const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
   state = {
@@ -21,7 +24,7 @@ export default class App extends React.Component {
       return (
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <LoginScreen></LoginScreen>
+          <AppContainer/>
         </View>
       );
     }
