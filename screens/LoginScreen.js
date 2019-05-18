@@ -8,7 +8,7 @@ export default class SettingsScreen extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'Login',
+    title: 'iAlbum',
   };
 
   handleLoginPress = () => {
